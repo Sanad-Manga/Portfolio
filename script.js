@@ -1,3 +1,5 @@
+  // import { Analytics } from "@vercel/analytics/react"
+
 // Dark Mode Toggle
 const darkModeToggle = document.getElementById('darkModeToggle');
 const body = document.body;
@@ -91,4 +93,3 @@ document.addEventListener('DOMContentLoaded', function() {
   
   });
 
-  import { Analytics } from "@vercel/analytics/react"
