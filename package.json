@@ -1,0 +1,24 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "My own portfolio website",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sanad-Manga/Portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sanad-Manga/Portfolio/issues"
+  },
+  "homepage": "https://github.com/Sanad-Manga/Portfolio#readme",
+  "dependencies": {
+    "@vercel/analytics": "^1.5.0",
+    "portfolio": "file:"
+  }
+}

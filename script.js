@@ -90,3 +90,5 @@ document.addEventListener('DOMContentLoaded', function() {
     } 
   
   });
+
+  import { Analytics } from "@vercel/analytics/react"
