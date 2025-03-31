@@ -1,16 +1,11 @@
-  // import { Analytics } from "@vercel/analytics/react"
-
-// Dark Mode Toggle
 const darkModeToggle = document.getElementById('darkModeToggle');
 const body = document.body;
 
-// Check for saved user preference
 if (localStorage.getItem('darkMode')) {
   body.classList.add('dark-mode');
   darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
 }
 
-// Toggle Function
 darkModeToggle.addEventListener('click', () => {
   body.classList.toggle('dark-mode');
   const isDarkMode = body.classList.contains('dark-mode');
@@ -19,6 +14,21 @@ darkModeToggle.addEventListener('click', () => {
     ? '<i class="fas fa-sun"></i>' 
     : '<i class="fas fa-moon"></i>';
 });
+// Check for saved user preference
+if (localStorage.getItem('darkMode')) {
+  body.classList.add('dark-mode');
+  darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+}
+
+// // Toggle Function
+// darkModeToggle.addEventListener('click', () => {
+//   body.classList.toggle('dark-mode');
+//   const isDarkMode = body.classList.contains('dark-mode');
+//   localStorage.setItem('darkMode', isDarkMode);
+//   darkModeToggle.innerHTML = isDarkMode 
+//     ? '<i class="fas fa-sun"></i>' 
+//     : '<i class="fas fa-moon"></i>';
+// });
 
 // Smooth scrolling for navigation
 document.querySelectorAll('nav a').forEach(anchor => {
