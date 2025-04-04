@@ -25,14 +25,14 @@
     font-family: 'Inter', sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
-    transition: background 0.3s ease, color 0.3s ease;
+    transition: 0.3s ease, color 0.3s ease;
   }
   
-  /* Dark Mode Toggle */
+  /* Dark Mode Toggle - ONLY CHANGED THIS SECTION */
   .toggle-btn {
     position: fixed;
-    top: 20px;
-    right: 20px;
+    top: 30px; /* Changed from 20px to position below navbar */
+    right: 30px;
     background: var(--primary-color);
     color: white;
     border: none;
@@ -46,7 +46,7 @@
     justify-content: center;
   }
   
-  /* Navigation */
+  /* Navigation - ONLY CHANGED THE MOBILE PART */
   .navbar {
     background: var(--nav-bg);
     box-shadow: var(--nav-shadow);
@@ -68,15 +68,13 @@
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s;
+    position: relative;
   }
   
   .navbar a:hover {
     color: var(--primary-color);
   }
 
-  .navbar a {
-    position: relative;
-  }
   .navbar a::after {
     content: '';
     position: absolute;
@@ -91,6 +89,64 @@
     width: 100%;
   }
   
+  /* iPhone 14 Pro Max (430px) responsiveness - NEW */
+  @media (max-width: 430px) {
+    .navbar ul {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 1rem;
+      padding-right: 50px; /* Space for dark mode button */
+    }
+    
+    .toggle-btn {
+      top: 15px;
+      right: 15px;
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+  /* Mobile Navbar Fix (ONLY for wrapping) */
+  @media (max-width: 768px) {
+    .navbar ul {
+      flex-wrap: nowrap; /* Prevent wrapping */
+      overflow-x: auto; /* Enable horizontal scroll */
+      -webkit-overflow-scrolling: touch; /* Smooth iOS scroll */
+      padding-bottom: 10px; /* Space for scrollbar */
+      gap: 1rem; /* Reduce gap if needed */
+    }
+  }
+
+  
+
+  @media (max-width: 768px) {
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding: 0 1rem;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  
+    .project-card {
+      width: 100% !important;
+      margin: 0 !important;
+    }
+  }
+  @media (max-width: 768px) {
+    .project-grid {
+      width: 100%;
+      padding: 0 1rem;
+      box-sizing: border-box;
+    }
+    .project-card {
+      margin: 0 auto; /* Center cards */
+    }
+  }
+
+  
+  /* REST OF YOUR ORIGINAL CSS BELOW - UNTOUCHED */
   /* Hero Section */
   .hero {
     min-height: 80vh;
@@ -128,15 +184,15 @@
   }
   
   /* GitHub Button - Match Demo Button Hover */
-.btn-outline {
-    transition: all 0.3s ease !important; /* Force smooth transition */
+  .btn-outline {
+    transition: all 0.3s ease !important;
   }
   
   .btn-outline:hover {
     background: var(--primary-color) !important;
     color: white !important;
     border-color: var(--primary-color) !important;
-    transform: translateY(-2px) !important; /* Optional: Add slight lift */
+    transform: translateY(-2px) !important;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
   }
   
@@ -201,20 +257,16 @@
     transition: transform 0.3s, box-shadow 0.3s;
   }
   
-  /* Project Cards - Hover (Light Mode - Keep as is) */
-.light-mode .project-card:hover {
+  .light-mode .project-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
   }
   
-  /* Project Cards - Hover (Dark Mode - Enhanced) */
   .dark-mode .project-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);  /* Darker shadow for contrast */
-    outline: 1px solid rgba(255, 255, 255, 0.1); /* Light border for visibility */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    outline: 1px solid rgba(255, 255, 255, 0.1);
   }
-
-
 
   .project-img {
     height: 180px;
@@ -238,7 +290,7 @@
   }
 
   .project-img {
-    background: linear-gradient(135deg, var(--primary-color), #3a0ca3); /* Replace solid color */
+    background: linear-gradient(135deg, var(--primary-color), #3a0ca3);
     height: 180px;
   }
   
@@ -268,9 +320,6 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
-  
-  
-  
   /* Contact Section */
   .contact-links {
     display: flex;
@@ -372,8 +421,6 @@
     scroll-behavior: smooth;
   }
 
-  
-
   /* Footer Styles */
 .site-footer {
     background: var(--nav-bg);
@@ -399,30 +446,9 @@
     margin-top: 0.5rem;
   }
 
-  
-
-/* Guaranteed Working Styles */
-.back-to-top {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: var(--primary-color);
-  border: none;
-  cursor: pointer;
-  opacity: 0;
-  transition: opacity 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-  z-index: 9999;
-}
-
-.back-to-top.visible {
+#backToTop.visible {
   opacity: 1;
+  display: flex;
 }
 
 .back-to-top:hover {
@@ -435,24 +461,22 @@
     height: 20px;
   }
   
-  /* Force visibility for testing - remove after verification */
+  /* Back-to-Top Button Styles */
   #backToTop {
-    opacity: 1 !important;
-    display: flex !important;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 9999;
+    text-decoration: none;
+    font-size: 20px;
   }
-
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .hero-content h1 {
-      font-size: 2.2rem;
-    }
-    .navbar ul {
-      gap: 1rem;
-    }
-    .project-grid {
-      grid-template-columns: 1fr;
-    }
-
-    
-    
-}

@@ -1,26 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+  <script>
+    // Only load on production
+    if (window.location.hostname !== '127.0.0.1' && 
+        window.location.hostname !== 'localhost') {
+      const script = document.createElement('script');
+      script.src = '/_vercel/insights/script.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    } else {
+      // Mock the function for local development
+      window.va = function() { console.debug('[Analytics]', ...arguments) };
+    }
+  </script>
+  
+ <!-- Font Awesome -->
+<link rel="stylesheet" 
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+crossorigin="anonymous"
+referrerpolicy="no-referrer">
 
-  <script defer src="https://unpkg.com/@vercel/speed-insights@latest"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" 
+rel="stylesheet"
+crossorigin="anonymous">
+
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ahmed Sanad | Data Scientist</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="light-mode">
   <!-- Dark Mode Toggle -->
-  <button id="darkModeToggle" class="toggle-btn">
+  <button id="darkModeToggle"
+    class="toggle-btn"
+    aria-label="Toggle dark mode" 
+    title="Toggle dark mode">
     <i class="fas fa-moon"></i>
   </button>
-
+  
   <!-- Navigation -->
   <nav class="navbar">
     <ul>
@@ -51,8 +78,18 @@
         <h3>Data Analysis Dashboard</h3>
         <p>Python, Pandas, Plotly</p>
         <div class="project-links">
-          <a href="#" class="btn btn-outline"><i class="fab fa-github"></i> Code</a>
-          <a href="#" class="btn btn-primary">Demo</a>
+          <a href="https://github.com/your-repo" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="btn btn-outline">
+             <i class="fab fa-github"></i> Code
+          </a>
+          <a href="https://your-demo.com" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="btn btn-primary">
+             Demo
+          </a>
         </div>
       </div>
       <!-- Project 2 -->
@@ -61,7 +98,12 @@
         <h3>ML Sentiment Analysis</h3>
         <p>Scikit-learn, NLTK</p>
         <div class="project-links">
-          <a href="#" class="btn btn-outline"><i class="fab fa-github"></i> Code</a>
+          <a href="https://github.com/your-repo" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="btn btn-outline">
+             <i class="fab fa-github"></i> Code
+          </a>
         </div>
       </div>
     </div>
@@ -90,8 +132,8 @@
     </div>
   </section>
 
-<!-- Education & Certifications Section -->
-<section id="education" class="section">
+  <!-- Education & Certifications Section -->
+  <section id="education" class="section">
     <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education & Certifications</h2>
     
     <!-- Timeline Item 1: Degree -->
@@ -118,13 +160,18 @@
       </div>
       <div class="timeline-content">
         <h3>IBM Data Science Professional Certificate</h3>
-        
         <p class="timeline-date">2025</p>
         <p class="degree">Coursera (Offered by the IBM Skills Networks Team)</p>
         <ul>
-          <li>Main Topics: Python, Data Analysis, ML, Data Visualization  </li>
-          <li><a href="#" class="credential-link">View Credential</a></li>
-          
+          <li>Main Topics: Python, Data Analysis, ML, Data Visualization</li>
+          <li>
+            <a href="https://www.coursera.org/professional-certificates/ibm-data-science" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="credential-link">
+               View Credential
+            </a>
+          </li>
         </ul>
       </div>
     </div>
@@ -134,24 +181,35 @@
   <section id="contact" class="section">
     <h2 class="section-title">Get In Touch</h2>
     <div class="contact-links">
-      <a href="mailto:ahmedsanad963@gmail.com" class="contact-btn"><i class="fas fa-envelope"></i> Email</a>
-      <a href="https://www.linkedin.com/in/ahmed-sanad-108aa5180/" class="contact-btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
-      <a href="https://github.com/Sanad-manga" class="contact-btn"><i class="fab fa-github"></i> GitHub</a>
+      <a href="mailto:ahmedsanad963@gmail.com" class="contact-btn">
+        <i class="fas fa-envelope"></i> Email
+      </a>
+      <a href="https://www.linkedin.com/in/ahmed-sanad-108aa5180/" 
+         target="_blank" 
+         rel="noopener noreferrer" 
+         class="contact-btn">
+         <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      <a href="https://github.com/Sanad-manga" 
+         target="_blank" 
+         rel="noopener noreferrer" 
+         class="contact-btn">
+         <i class="fab fa-github"></i> GitHub
+      </a>
     </div>
   </section>
 
-  <script  src="script.js"></script>
+  <script src="script.js"></script>
 
   <!-- Footer -->
-<footer class="site-footer">
+  <footer class="site-footer">
     <div class="footer-content">
       <p>&copy; <span id="year"></span> Copyright Ahmed Sanad</p>
     </div>
- 
-    </footer>
-    
-<!-- Final Working Back-to-Top Button -->
-<a href="#home" id="backToTop" class="back-to-top" aria-label="Back to top" style="display: none;">
+  </footer>
+  
+  <!-- Final Working Back-to-Top Button -->
+  <a href="#home" id="backToTop" class="back-to-top" aria-label="Back to top" style="display: none;">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
       <path d="M5 15L12 8L19 15" stroke="white" stroke-width="2" stroke-linecap="round"/>
     </svg>
