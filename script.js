@@ -155,3 +155,19 @@ document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('scroll', handleScroll, { passive: true });
 });
 
+
+document.addEventListener('DOMContentLoaded', function() {
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+  
+  menuToggle.addEventListener('click', function() {
+    mobileMenu.classList.toggle('active');
+    
+    // Optional: Change menu icon to close icon when active
+    if (mobileMenu.classList.contains('active')) {
+      menuToggle.src = 'close.png'; // if you have a close icon
+    } else {
+      menuToggle.src = 'menu.png';
+    }
+  });
+});
