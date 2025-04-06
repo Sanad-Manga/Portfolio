@@ -165,9 +165,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Optional: Change menu icon to close icon when active
     if (mobileMenu.classList.contains('active')) {
-      menuToggle.src = 'close.png'; // if you have a close icon
+      menuToggle.src = 'close.svg'; // if you have a close icon
     } else {
-      menuToggle.src = 'menu.png';
+      menuToggle.src = 'menu.svg';
     }
   });
 });
