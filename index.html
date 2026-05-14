@@ -86,40 +86,72 @@ crossorigin="anonymous">
   <section id="projects" class="section">
     <h2 class="section-title">Featured Projects</h2>
     <div class="project-grid">
-      <!-- Project 1 -->
+
+      <!-- GIU-Nexus -->
       <div class="project-card">
-        <div class="project-img" style="background-color: #3498db;"></div>
-        <h3>Data Analysis Dashboard</h3>
-        <p>Python, Pandas, Plotly</p>
+        <div class="project-img" style="background-color: #1a3a6b;"></div>
+        <div class="project-badge">In Progress</div>
+        <h3>GIU-Nexus</h3>
+        <p class="project-role">Scrum Master</p>
+        <p>LinkedIn-style professional networking platform with AI-powered skill extraction using HuggingFace NER models. Features OTP auth, CI/CD pipeline, and Railway deployment.</p>
+        <p class="project-stack">MERN · HuggingFace API · Railway · GitHub Actions · Jest</p>
         <div class="project-links">
-          <a href="https://github.com/your-repo" 
-             target="_blank" 
-             rel="noopener noreferrer" 
+          <span class="btn btn-outline private-repo"><i class="fas fa-lock"></i> Private Repo</span>
+        </div>
+      </div>
+
+      <!-- HRMS -->
+      <div class="project-card">
+        <div class="project-img" style="background-color: #1a5c2a;"></div>
+        <div class="project-badge">Team Project</div>
+        <h3>HR Management System</h3>
+        <p>Enterprise-grade HRMS with 133 stored procedures and a hand-designed ERD covering 20+ entities. Modules include multi-currency payroll, leave management, shift scheduling, and role-based access for 5 user types.</p>
+        <p class="project-stack">SQL Server · .NET · Stored Procedures · ERD</p>
+        <div class="project-links">
+          <a href="https://github.com/MohabHindawy/HR-System"
+             target="_blank"
+             rel="noopener noreferrer"
              class="btn btn-outline">
              <i class="fab fa-github"></i> Code
           </a>
-          <a href="https://your-demo.com" 
-             target="_blank" 
-             rel="noopener noreferrer" 
+        </div>
+      </div>
+
+      <!-- AI Debugging Coach -->
+      <div class="project-card">
+        <div class="project-img" style="background-color: #7b2d8b;"></div>
+        <div class="project-badge dev-badge">In Development</div>
+        <h3>AI Debugging Coach</h3>
+        <p>RAG-based tool that diagnoses system errors, coaches debugging decisions, and connects bugs to studied course material via PDF ingestion and semantic search. Exploring real-world limits: RAM constraints, latency, and scalability of local LLM inference.</p>
+        <p class="project-stack">Python · LangChain · Ollama · Vector DB · RAG</p>
+        <div class="project-links">
+          <span class="btn btn-outline private-repo"><i class="fas fa-code-branch"></i> Coming Soon</span>
+        </div>
+      </div>
+
+      <!-- Portfolio -->
+      <div class="project-card">
+        <div class="project-img" style="background-color: #c0392b;"></div>
+        <div class="project-badge live-badge">Live</div>
+        <h3>Personal Portfolio</h3>
+        <p>This portfolio — built from scratch and deployed on Vercel. Includes dark mode, mobile-responsive layout, and Vercel analytics.</p>
+        <p class="project-stack">JavaScript · CSS · Vercel</p>
+        <div class="project-links">
+          <a href="https://github.com/Sanad-Manga/Portfolio"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="btn btn-outline">
+             <i class="fab fa-github"></i> Code
+          </a>
+          <a href="https://ahmedsanad.vercel.app"
+             target="_blank"
+             rel="noopener noreferrer"
              class="btn btn-primary">
-             Demo
+             Live
           </a>
         </div>
       </div>
-      <!-- Project 2 -->
-      <div class="project-card">
-        <div class="project-img" style="background-color: #e74c3c;"></div>
-        <h3>ML Sentiment Analysis</h3>
-        <p>Scikit-learn, NLTK</p>
-        <div class="project-links">
-          <a href="https://github.com/your-repo" 
-             target="_blank" 
-             rel="noopener noreferrer" 
-             class="btn btn-outline">
-             <i class="fab fa-github"></i> Code
-          </a>
-        </div>
-      </div>
+
     </div>
   </section>
 
@@ -131,16 +163,39 @@ crossorigin="anonymous">
         <h3>Languages</h3>
         <ul>
           <li>Python</li>
+          <li>JavaScript</li>
+          <li>Java</li>
+          <li>C / C++</li>
           <li>SQL</li>
-          <li>R</li>
         </ul>
       </div>
       <div class="skill-category">
-        <h3>Data Science</h3>
+        <h3>Web &amp; Backend</h3>
         <ul>
-          <li>Pandas</li>
-          <li>NumPy</li>
-          <li>TensorFlow</li>
+          <li>Node.js</li>
+          <li>Express</li>
+          <li>React</li>
+          <li>MongoDB</li>
+          <li>.NET</li>
+        </ul>
+      </div>
+      <div class="skill-category">
+        <h3>AI / ML</h3>
+        <ul>
+          <li>HuggingFace API</li>
+          <li>LangChain</li>
+          <li>Ollama</li>
+          <li>RAG &amp; Embeddings</li>
+        </ul>
+      </div>
+      <div class="skill-category">
+        <h3>DevOps &amp; Tools</h3>
+        <ul>
+          <li>GitHub Actions</li>
+          <li>Railway / Vercel</li>
+          <li>Jest</li>
+          <li>Git &amp; Postman</li>
+          <li>Jira</li>
         </ul>
       </div>
     </div>
@@ -157,11 +212,9 @@ crossorigin="anonymous">
       </div>
       <div class="timeline-content">
         <h3>German International University (GIU)</h3>
-        <p class="timeline-date">2024 - Present</p>
-        <p class="degree">B.Sc. Computer Science | Major: Data Science</p>
-        <p class="degree"><strong>GPA:</strong> 3.8/4.0</p>
+        <p class="timeline-date">2024 – Present</p>
+        <p class="degree">B.Sc. Computer Science | Data Science Specialization</p>
         <ul>
-          <li>Relevant Courses: Machine Learning, Data Mining, Statistics</li>
           <li>Expected Graduation: 2028</li>
         </ul>
       </div>
@@ -175,17 +228,9 @@ crossorigin="anonymous">
       <div class="timeline-content">
         <h3>IBM Data Science Professional Certificate</h3>
         <p class="timeline-date">2025</p>
-        <p class="degree">Coursera (Offered by the IBM Skills Networks Team)</p>
+        <p class="degree">Coursera · IBM Skills Network</p>
         <ul>
-          <li>Main Topics: Python, Data Analysis, ML, Data Visualization</li>
-          <li>
-            <a href="https://www.coursera.org/professional-certificates/ibm-data-science" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               class="credential-link">
-               View Credential
-            </a>
-          </li>
+          <li>Python, Data Analysis, ML, Data Visualization</li>
         </ul>
       </div>
     </div>
