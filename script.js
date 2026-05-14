@@ -170,4 +170,30 @@ document.addEventListener('DOMContentLoaded', function() {
       menuToggle.src = 'menu.svg';
     }
   });
+
+  // ======================
+  // Photo Upload
+  // ======================
+  const photoUpload = document.getElementById('photoUpload');
+  const photoDisplay = document.getElementById('photoDisplay');
+
+  // Load saved photo on page load
+  const savedPhoto = localStorage.getItem('profilePhoto');
+  if (savedPhoto && photoDisplay) {
+    photoDisplay.innerHTML = `<img src="${savedPhoto}" alt="Ahmed Sanad">`;
+  }
+
+  if (photoUpload && photoDisplay) {
+    photoUpload.addEventListener('change', function(e) {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = function(event) {
+        const dataUrl = event.target.result;
+        photoDisplay.innerHTML = `<img src="${dataUrl}" alt="Ahmed Sanad">`;
+        localStorage.setItem('profilePhoto', dataUrl);
+      };
+      reader.readAsDataURL(file);
+    });
+  }
 });
