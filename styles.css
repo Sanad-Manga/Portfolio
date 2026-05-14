@@ -664,21 +664,6 @@ html {
   color: #ccc;
 }
 
-.photo-upload-label {
-  font-size: 13px;
-  cursor: pointer;
-  padding: 6px 16px;
-  border-radius: 20px;
-  border: 1px solid var(--accent-color, #3498db);
-  color: var(--accent-color, #3498db);
-  transition: all 0.2s ease;
-}
-
-.photo-upload-label:hover {
-  background: var(--accent-color, #3498db);
-  color: #fff;
-}
-
 .about-text {
   flex: 1;
   min-width: 260px;
